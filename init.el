@@ -55,6 +55,11 @@ This function should only modify configuration layer settings."
      ;; To have auto-completion on as soon as you start typing
      ;; (auto-completion :variables auto-completion-idle-delay nil)
 
+
+     (c-c++ :variables
+            c-c++-enable-clang-support)
+
+
      ;; https://develop.spacemacs.org/layers/+lang/clojure/README.html
      (clojure :variables
               ;; clojure-backend 'cider               ;; use cider and disable lsp
@@ -973,6 +978,8 @@ before packages are loaded."
   ;; (I place reveal.js files in same directory as I write the org files)
   (setq org-reveal-root "")
   ;;
+  ;; set the org timer sound
+  (setq org-clock-sound "/volumes/Macintosh HDD/System/Library/Sounds/Ping.aiff")
   ;; Define the location of the file to hold tasks
   (with-eval-after-load 'org
     (setq org-default-notes-file "~/Dropbox/todo-list.org"))
